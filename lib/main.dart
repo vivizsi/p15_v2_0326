@@ -1,43 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:act_13_pagerouter_/pantalla2_0326.dart';
+import 'package:act_13_pagerouter_/pantalla1_0326.dart';
+import 'package:act_13_pagerouter_/pantallainicial0326.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MiApp0326());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+class MiApp0326 extends StatelessWidget {
+  const MiApp0326({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        // useMaterial3: true,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
-      ),
-    );
-  }
-}
+        debugShowCheckedModeBanner: false,
+        initialRoute: "/",
+        routes: {
+          "/": (context) => const PantallaInicial0326(),
+          "/Pantalla1_0326": (context) => const Pantalla1_0326(),
+          "/Pantalla2_0326": (context) => const Pantalla2_0326(),
+        });
+  } // Fin Widget
+} //Fin MiApp0398
